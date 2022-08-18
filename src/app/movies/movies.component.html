@@ -1,0 +1,8 @@
+<div class="list-group">
+    <!-- <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+      The current link item
+    </a> -->
+    <a *ngFor="let m of movies" href="#" class="list-group-item list-group-item-action" [routerLink]="['/movie-info', m.rank]">{{m.rank}}. {{m.title}}</a>
+    <!-- <a class="list-group-item list-group-item-action disabled">A disabled link item</a> -->
+  </div>
+  <router-outlet></router-outlet>

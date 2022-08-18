@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem;">
+    <img src="{{m.img}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{m.title}}</h5>
+      <p class="card-text">Crew :</p>
+      <ul>
+        <li *ngFor="let c of m.crew">{{c}}</li>
+      </ul>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Year : {{m.year}}</li>
+      <li class="list-group-item">Rank : {{m.rank}}</li>
+      <li class="list-group-item">Rank Change: {{m.rankupdown}}</li>
+      <li class="list-group-item">imdB Rating: {{m.imdbrating}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="{{url}}" class="card-link">Api : {{url}}</a>
+    </div>
+  </div>

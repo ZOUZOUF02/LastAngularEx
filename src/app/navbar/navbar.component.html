@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WELCOME</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" routerLink="/movies">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" routerLink="/students">Students</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" routerLink="/countries">Countries</a>
+          </li> -->
+          <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Countries method 1
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" routerLink="/countries/Asia" >Asia</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/countries/Europe">Europe</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/countries/Africa">Africa</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/countries/NorthAmerica">North America</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/countries/SouthAmerica">South America</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/countries/Oceania">Oceania</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/countries/Carribean">Carribean</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/countries/All">All</a></li>
+          </ul> -->
+          <!-- <li><hr class="dropdown-divider"></li> can be used inside the ul above--> 
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Countries method 2
+          </a>
+          <ul class="dropdown-menu">
+            <li *ngFor="let r of regions"><a class="dropdown-item" href="#" [routerLink]="['/countries', r]">{{r}}</a></li>
+            <li><a class="dropdown-item" href="#" [routerLink]="['/countries', 'All']">All</a></li>
+          </ul>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li> -->
+        </ul>
+        <input type="text" placeholder="Enter Country name please" [(ngModel)]="search" (change)="HandleChange()">
+        <button class="btn btn-secondary" [routerLink]="['/countries/All' , search]">Show</button>
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>

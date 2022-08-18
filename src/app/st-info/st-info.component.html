@@ -1,0 +1,7 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">name: {{st.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">username: {{st.username}}</h6>
+      <input type="number" [(ngModel)]="st.note" (change)="HandleChange()">
+    </div>
+  </div>
